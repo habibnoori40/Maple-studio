@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Monotype";
+  src: url("Monotype_-_Helvetica_Now_Display_Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer utilities {
+  .container__sp {
+    @apply 3xl:w-4/5 w-full px-4 mx-auto;
+  }
+  .active_ {
+    @apply border-b border-b-grayish-3 dark:border-b-grayish pb-px;
+  }
+  .link__hov {
+    @apply hover:text-bright-orange transition-colors duration-200;
+  }
+  .link__hov-2 {
+    @apply hover:text-blueish transition-colors duration-200;
+  }
+  .big__circle {
+    @apply before:content-[''] before:absolute before:-z-10 before:w-full before:h-full before:border before:dark:border-grayish-4 before:border-gray-800 before:rounded-50 before:-top-16 after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-14 sm:after:bottom-14 after:w-3 after:h-3 after:rounded-50 after:bg-grayish after:dark:bg-grayish-6;
+  }
+  .burger__icon-anim div:first-child {
+    @apply translate-y-3 -rotate-45;
+  }
+  .burger__icon-anim div:last-child {
+    @apply rotate-45;
+  }
+  .act__menu {
+    @apply opacity-100 visible;
+  }
+}
+
+.scrollbar {
+  overflow-y: auto;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
